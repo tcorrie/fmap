@@ -1,0 +1,24 @@
+fmap CHANGELOG:
+v2.4.2: First tracked update
+
+v3.0.0: Major update:
+- Condensed one_plot, row_plot, multi_plot to one function, make_plots.
+-	Added axes_2d, which make_plots uses, to convert any axes object to a workable 2d indexer.
+- axes_labels is its own separate function.
+- plot_var is simplified, and make_colorbar, show_contours have been worked into their own functions.
+	- make_colorbar can now hide various tick labels for clarity
+	- many of the size parameters have been re-arranged to better fit their respective functions.
+	- many optional parameters are now required, partially from the broken up functions.
+- ability to directly adjust subplot padding and suptitle in both directions.
+- removed unused dependencies
+- removed code depending on outside parameters, including csv files and shapefiles.
+
+v3.1.0 Minor update:
+- make_plots: fig.subplots_adjust() now used in place of fig.tight_layout() because it plays nicer.
+- axes_labels: order removed for redundancy and replaced with style, to have the option to place coordinates on outer subplots only.
+- axes_labels: rotation keyword added to tinker with coordinate label rotation for both latitudes and longitudes and handling of inputs.
+- plot_point_value and add_text merged to plot_text.
+- show_contours changed to show_contour_labels.
+- Function documentation has been converted to docstrings and updated to standards.
+- Copyright usage added to the module preamble.
+- Moved changelog (this file) to it's own file.
